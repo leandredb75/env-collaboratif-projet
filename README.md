@@ -22,7 +22,7 @@ git clone https://gitlab.com/leandredb75/env-collaboratif-projet
 ### Build & Run
 
 ```bash
-docker-compose build && docker-compose up 
+docker-compose build && docker-compose up  
 ```
 Feel free to configure the default port .. in `docker-compose.yml` to whatever you like.
 
