@@ -2,8 +2,9 @@ before_script:
   # Install dependencies
   - bash ci/docker_install.sh > /dev/null
 
-# We test PHP5.6
-test:5.6:
-  image: php:5.6
+# We test PHP7.0 (good luck with that)
+test:8.0:
+  image: php:8.0
   script:
     - phpunit --configuration phpunit_mysql.xml
+

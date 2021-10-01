@@ -22,9 +22,21 @@ git clone https://gitlab.com/leandredb75/env-collaboratif-projet
 ### Build & Run
 
 ```bash
-docker-compose build && docker-compose up  
+docker-compose build && docker-compose up -d 
 ```
 Feel free to configure the default port .. in `docker-compose.yml` to whatever you like.
+
+### Lancer les migrations dans le containeur 
+```bash
+composer install 
+```
+```bash
+php artisan migrate
+```
+
+```bash
+php artisan db:seed
+``` 
 
 ### Stop Everything
 
