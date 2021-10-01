@@ -1,6 +1,6 @@
 FROM php:5.6-apache
 
-
+ENV COMPOSER_ALLOW_SUPERUSER=1
 WORKDIR /var/www/html
 ADD . .
 
@@ -21,12 +21,6 @@ ADD ./server/php.ini /usr/local/etc/php/conf.d/php.ini
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer --version
-
-# setup a non-root user for composer usage
-RUN useradd -ms /bin/bash user
-RUN chown -R user /var/www/html/vendor/composer/
-RUN chmod 755 /var/www/html/vendor/composer/
-USER user
 
 RUN composer install
 RUN php artisan migrate
