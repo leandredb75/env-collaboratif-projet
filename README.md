@@ -1,4 +1,4 @@
-# Docker + Lumen with Nginx, MySQL, and Memcached
+# Docker + Lumen with Nginx, MySQL
 
 ## Why?
 
